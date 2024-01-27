@@ -9,7 +9,6 @@ public class Shape : MonoBehaviour {
 
         Spline spline;
         int pointCount;
-        [SerializeField] float checkRadius;
         [SerializeField] int[] lockedPointIndex;
 
         void Start() {
@@ -106,8 +105,8 @@ public class Shape : MonoBehaviour {
         }
         public void UpdateSpriteShape(int i, Vector3 pos) {
                 spline.SetPosition(i, pos - transform.position);
-                ReTangent(i);
-                ReTangent(i - 1);
-                ReTangent(i + 1);
+                //ReTangent(i);
+                //ReTangent(i - 1);
+                //ReTangent(i + 1);
         }
 }

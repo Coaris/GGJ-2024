@@ -54,8 +54,18 @@ public class MouseController : MonoBehaviour {
 
         void GetDragObject() {
                 if (Input.GetMouseButtonDown(0)) {
-                        isDraging = true;
                         hit = Physics2D.Raycast(mousePos, Vector2.zero);
+                        if (hit.collider != null) {
+                                if (hit.transform.tag == "Dragon") {
+                                        isDraging = true;
+                                }
+                                else if (hit.transform.tag == "Bird") {
+                                        hit.transform.GetComponent<Scratch>().ReduceTimes();
+                                }
+                                else if (hit.transform.tag == "EggChin") {
+                                        hit.transform.GetComponent<EggChin>().DisableChin();
+                                }
+                        }
                 }
                 if (Input.GetMouseButtonUp(0)) {
                         //if (hit.transform != null) {
@@ -67,7 +77,7 @@ public class MouseController : MonoBehaviour {
         void Drag() {
                 if (isDraging && hit.collider != null) {
                         hit.transform.position = new Vector3(mousePos.x, mousePos.y, hit.transform.position.z);
-                        Debug.Log(hit.collider);
+                        //Debug.Log(hit.collider);
                 }
         }
 
