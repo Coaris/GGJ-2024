@@ -594,7 +594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!66 &821972508
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -631,7 +631,51 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 821972510}
+    m_ColliderPaths:
+    - - X: -73755152
+        Y: -13016716
+      - X: -68444400
+        Y: -11876750
+      - X: -64532816
+        Y: -11437138
+      - X: -60557052
+        Y: -11442877
+      - X: -56596536
+        Y: -11856267
+      - X: -54795004
+        Y: -11819998
+      - X: -50833644
+        Y: -11178434
+      - X: -47208944
+        Y: -10024489
+      - X: -38864656
+        Y: -6695881
+      - X: -35797932
+        Y: -5912541
+      - X: -32877144
+        Y: -5857858
+      - X: -28693714
+        Y: -6658897
+      - X: -21555470
+        Y: -8571172
+      - X: -14503238
+        Y: -10812759
+      - X: -5479313
+        Y: -14014679
+      - X: 24872322
+        Y: -7292897
+      - X: 20122132
+        Y: 11198808
+      - X: -2787709
+        Y: 11730477
+      - X: -22798850
+        Y: 11197066
+      - X: -63041816
+        Y: 6641843
+      - X: -80051096
+        Y: -15098791
   m_CompositePaths:
     m_Paths:
     - - {x: -1.4503229, y: -1.0812762}
@@ -948,9 +992,9 @@ SpriteShapeRenderer:
   m_ShapeTexture: {fileID: 2800000, guid: ff565e837256c5e47a20c05b05f6834a, type: 3}
   m_Sprites:
   - {fileID: 21300000, guid: 41ee2847d5772ec4f83f8fe32e7686a5, type: 3}
-  - {fileID: 21300000, guid: 41ee2847d5772ec4f83f8fe32e7686a5, type: 3}
-  - {fileID: 21300000, guid: 41ee2847d5772ec4f83f8fe32e7686a5, type: 3}
-  - {fileID: 21300000, guid: 41ee2847d5772ec4f83f8fe32e7686a5, type: 3}
+  - {fileID: 21300000, guid: 5ef0967121f58964e9a8f77dea876025, type: 3}
+  - {fileID: 21300000, guid: 5ef0967121f58964e9a8f77dea876025, type: 3}
+  - {fileID: 21300000, guid: 5ef0967121f58964e9a8f77dea876025, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
