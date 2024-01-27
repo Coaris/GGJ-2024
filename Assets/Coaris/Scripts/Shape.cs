@@ -5,7 +5,7 @@ using UnityEngine.U2D;
 
 public class Shape : MonoBehaviour {
         SpriteShapeController _ssc;
-        static List<Shape> shapeList;
+        static List<Shape> shapeList=new List<Shape>();
 
         Spline spline;
         int pointCount;
@@ -14,7 +14,7 @@ public class Shape : MonoBehaviour {
 
         void Start() {
                 if (shapeList == null) {
-                        shapeList = new List<Shape>();
+                        //shapeList = new List<Shape>();
                         shapeList.Add(this);
                 }
                 else {
@@ -24,6 +24,9 @@ public class Shape : MonoBehaviour {
                 spline = _ssc.spline;
                 pointCount = spline.GetPointCount();
         }
+        public static void ClearShapeList() {
+                shapeList.Clear();
+        }
 
         static float GetDistance(Vector2 from, Vector2 to) {
                 return Vector2.Distance(from, to);
@@ -32,6 +35,7 @@ public class Shape : MonoBehaviour {
                 Vector3 checkPos;
                 nearest = -1;
                 nearestShape = null;
+                if (shapeList.Count == 0) return;
                 foreach (Shape _shape in shapeList) {
 
                         for (int i = 0; i < _shape.pointCount; i++) {

@@ -7,17 +7,26 @@ public class MouseController : MonoBehaviour {
         [SerializeField] float checkRadius;
 
         Vector2 mousePos;
+        RaycastHit2D hit;
+        bool isDraging;
         Shape nearestShape;
         int nearest = -1;
 
         void Update() {
                 GetMousePosition();
                 Click();
-                MovePoint();
+                MoveShapePoint();
+                GetDragObject();
+                Drag();
+        }
+        void OnDisable() {
+                Shape.ClearShapeList();
         }
         void GetMousePosition() {
                 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+
+        #region Íø¸ñÅ¤Çú
         void Click() {
                 if (Input.GetMouseButtonDown(0)) {
                         Shape.GetNearestPoint(mousePos, checkRadius, out nearest, out nearestShape);
@@ -34,11 +43,32 @@ public class MouseController : MonoBehaviour {
                         nearest = -1;
                 }
         }
-        void MovePoint() {
+        void MoveShapePoint() {
                 if (nearestShape != null) {
-                        
+
                         nearestShape.UpdateSpriteShape(nearest, mousePos);
-                        
+
                 }
         }
+        #endregion
+
+        void GetDragObject() {
+                if (Input.GetMouseButtonDown(0)) {
+                        isDraging = true;
+                        hit = Physics2D.Raycast(mousePos, Vector2.zero);
+                }
+                if (Input.GetMouseButtonUp(0)) {
+                        //if (hit.transform != null) {
+                        //        hit.transform.parent.GetComponent<Drag>().BackDragPoint();
+                        //}
+                        isDraging = false;
+                }
+        }
+        void Drag() {
+                if (isDraging && hit.collider != null) {
+                        hit.transform.position = new Vector3(mousePos.x, mousePos.y, hit.transform.position.z);
+                        Debug.Log(hit.collider);
+                }
+        }
+
 }
