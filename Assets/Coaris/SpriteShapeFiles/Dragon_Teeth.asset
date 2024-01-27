@@ -10,29 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af7181f404f1447c0a7a17b3070b952b, type: 3}
-  m_Name: Green
+  m_Name: Dragon_Teeth
   m_EditorClassIdentifier: 
   m_Angles:
-  - m_Start: 90
-    m_End: 270
+  - m_Start: -180
+    m_End: 180
     m_Order: 0
     m_Sprites:
     - {fileID: 21300000, guid: 41ee2847d5772ec4f83f8fe32e7686a5, type: 3}
-  - m_Start: -45
-    m_End: 45
-    m_Order: 0
-    m_Sprites: []
   m_FillTexture: {fileID: 2800000, guid: ff565e837256c5e47a20c05b05f6834a, type: 3}
   m_CornerSprites:
   - m_CornerType: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 5ef0967121f58964e9a8f77dea876025, type: 3}
+    - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - m_CornerType: 1
     m_Sprites:
-    - {fileID: 21300000, guid: 5ef0967121f58964e9a8f77dea876025, type: 3}
+    - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - m_CornerType: 2
     m_Sprites:
-    - {fileID: 21300000, guid: 5ef0967121f58964e9a8f77dea876025, type: 3}
+    - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - m_CornerType: 3
     m_Sprites:
     - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
