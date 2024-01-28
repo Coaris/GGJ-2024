@@ -65,6 +65,9 @@ public class MouseController : MonoBehaviour {
                                 else if (hit.transform.tag == "EggChin") {
                                         hit.transform.GetComponent<EggChin>().DisableChin();
                                 }
+                                else if (hit.transform.tag == "J") {
+                                        isDraging = true;
+                                }
                         }
                 }
                 if (Input.GetMouseButtonUp(0)) {
