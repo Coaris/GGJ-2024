@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af7181f404f1447c0a7a17b3070b952b, type: 3}
-  m_Name: DHuman
+  m_Name: DHuman_2
   m_EditorClassIdentifier: 
   m_Angles:
-  - m_Start: 135
-    m_End: 270
+  - m_Start: -90
+    m_End: 0
     m_Order: 0
     m_Sprites:
     - {fileID: 21300000, guid: 9a0dc594b646c57439547f0d4e9da25f, type: 3}
